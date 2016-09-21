@@ -1,0 +1,6 @@
+il file cibi deve avere la seguente struttura:
+
+prima riga = "nome parametro, es massimo volume zaino tra le doppie virgolette", <int value>,
+seconda --- penultima riga = <int id>, "nome cibo", <int calorie>, <int volume>,
+ultima riga = non mettere l'ultima virgola dopo <int volume>
+

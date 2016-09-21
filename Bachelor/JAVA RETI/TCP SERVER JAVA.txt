@@ -1,0 +1,84 @@
+import java.net.*;
+import java.io.*;
+
+public class TCPServer 
+{
+	Socket sock;
+	InputStream recvStream;
+	OutputStream sendStream; 
+	String request;
+	String response;
+
+	TCPServer (Socket s) throws IOException, UnknownHostException
+	{  
+	sock = s;  
+	recvStream = sock.getInputStream ();
+	sendStream = sock.getOutputStream ();
+    System.out.println("Connected on local port: " + s.getLocalPort());
+    System.out.println("Connected from client with IP "+ (s.getInetAddress()).getHostAddress() + " : " + s.getPort());
+	} // Fine costruttore  
+
+	void getRequest ()    
+	{ 
+		try  
+		{
+			int dataSize;
+			byte [] recvBuff = new byte [1024];
+			dataSize = recvStream.read (recvBuff, 0, 1024);
+			request = new String (recvBuff, 0, dataSize);  
+			System.out.println("Received: " + request);
+		} 
+		catch (IOException ex)  
+		{
+			System.err.println ("IOException in getRequest"); 
+		}
+	} // Fine getRequest
+	
+	void process()    
+	{  
+		response = request.toUpperCase() + '\n'; 
+	} // Fine process
+	
+	void sendResponse ()   
+	{  
+		try  
+		{
+			byte [] sendBuff = new byte [response.length ()];
+			sendBuff = response.getBytes ();
+			sendStream.write (sendBuff, 0, sendBuff.length);   
+		}
+		catch (IOException ex)  
+		{
+			System.err.println ("IOException in sendResponse");
+		}
+	} // Fine sendResponse
+	
+	void close ()   
+	{ 
+		try  
+		{
+			recvStream.close ();                  
+			sendStream.close ();
+			sock.close ();   
+		}  
+		catch (IOException ex)
+		{
+			System.err.println ("IOException in close");   
+		}
+	} // Fine close 
+	
+	public static void main (String [] args) throws IOException   
+	{
+		final int port = 6789;	
+		ServerSocket listenSock = new ServerSocket (port);  
+		while (true)  
+		{
+			TCPServer server = new TCPServer (listenSock.accept ());
+			server.getRequest ();                   
+			server.process ();
+			server.sendResponse ();
+			server.close ();  
+		}
+	} // Fine main 
+  
+} // Fine classe TCPServer

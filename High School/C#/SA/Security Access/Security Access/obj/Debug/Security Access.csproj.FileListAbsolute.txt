@@ -1,0 +1,18 @@
+C:\Documents and Settings\Luca\Desktop\SA\Security Access\Security Access\bin\Debug\Security Access.exe
+C:\Documents and Settings\Luca\Desktop\SA\Security Access\Security Access\bin\Debug\Security Access.pdb
+C:\Documents and Settings\Luca\Desktop\SA\Security Access\Security Access\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Luca\Desktop\SA\Security Access\Security Access\obj\Debug\Security_Access.Properties.Resources.resources
+C:\Documents and Settings\Luca\Desktop\SA\Security Access\Security Access\obj\Debug\Security Access.csproj.GenerateResource.Cache
+C:\Documents and Settings\Luca\Desktop\SA\Security Access\Security Access\obj\Debug\Security Access.exe
+C:\Documents and Settings\Luca\Desktop\SA\Security Access\Security Access\obj\Debug\Security Access.pdb
+C:\Documents and Settings\Luca\Desktop\SA\Security Access\Security Access\obj\Debug\Security_Access.Form1.resources
+C:\Documents and Settings\Luca\Desktop\prove c#\SA\Security Access\Security Access\obj\Debug\Security Access.exe
+C:\Documents and Settings\Luca\Desktop\prove c#\SA\Security Access\Security Access\obj\Debug\Security Access.pdb
+C:\Documents and Settings\Luca\Desktop\DA SALVARE\SA\Security Access\Security Access\obj\Debug\Security Access.exe
+C:\Documents and Settings\Luca\Desktop\DA SALVARE\SA\Security Access\Security Access\obj\Debug\Security Access.pdb
+C:\Documents and Settings\Luca\Desktop\DA SALVARE\SA\Security Access\Security Access\bin\Debug\Security Access.exe
+C:\Documents and Settings\Luca\Desktop\DA SALVARE\SA\Security Access\Security Access\bin\Debug\Security Access.pdb
+C:\Documents and Settings\Luca\Desktop\DA SALVARE\SA\Security Access\Security Access\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Luca\Desktop\DA SALVARE\SA\Security Access\Security Access\obj\Debug\Security_Access.Form1.resources
+C:\Documents and Settings\Luca\Desktop\DA SALVARE\SA\Security Access\Security Access\obj\Debug\Security_Access.Properties.Resources.resources
+C:\Documents and Settings\Luca\Desktop\DA SALVARE\SA\Security Access\Security Access\obj\Debug\Security Access.csproj.GenerateResource.Cache

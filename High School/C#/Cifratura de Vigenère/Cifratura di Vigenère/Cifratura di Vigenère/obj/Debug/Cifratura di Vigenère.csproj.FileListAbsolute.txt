@@ -1,0 +1,9 @@
+C:\Documents and Settings\Luca\Desktop\Cifratura de Vigenère\Cifratura di Vigenère\Cifratura di Vigenère\bin\Debug\Cifratura di Vigenère.exe.config
+C:\Documents and Settings\Luca\Desktop\Cifratura de Vigenère\Cifratura di Vigenère\Cifratura di Vigenère\bin\Debug\Cifratura di Vigenère.exe
+C:\Documents and Settings\Luca\Desktop\Cifratura de Vigenère\Cifratura di Vigenère\Cifratura di Vigenère\bin\Debug\Cifratura di Vigenère.pdb
+C:\Documents and Settings\Luca\Desktop\Cifratura de Vigenère\Cifratura di Vigenère\Cifratura di Vigenère\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Luca\Desktop\Cifratura de Vigenère\Cifratura di Vigenère\Cifratura di Vigenère\obj\Debug\Cifratura_di_Vigenère.Form1.resources
+C:\Documents and Settings\Luca\Desktop\Cifratura de Vigenère\Cifratura di Vigenère\Cifratura di Vigenère\obj\Debug\Cifratura_di_Vigenère.Properties.Resources.resources
+C:\Documents and Settings\Luca\Desktop\Cifratura de Vigenère\Cifratura di Vigenère\Cifratura di Vigenère\obj\Debug\Cifratura di Vigenère.csproj.GenerateResource.Cache
+C:\Documents and Settings\Luca\Desktop\Cifratura de Vigenère\Cifratura di Vigenère\Cifratura di Vigenère\obj\Debug\Cifratura di Vigenère.exe
+C:\Documents and Settings\Luca\Desktop\Cifratura de Vigenère\Cifratura di Vigenère\Cifratura di Vigenère\obj\Debug\Cifratura di Vigenère.pdb

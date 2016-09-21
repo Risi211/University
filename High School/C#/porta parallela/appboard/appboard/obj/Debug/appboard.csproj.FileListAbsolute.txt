@@ -1,0 +1,17 @@
+C:\Documents and Settings\Luca\Documenti\Visual Studio 2008\Projects\4 E\porta parallela\appboard\appboard\bin\Debug\appboard.exe
+C:\Documents and Settings\Luca\Documenti\Visual Studio 2008\Projects\4 E\porta parallela\appboard\appboard\bin\Debug\appboard.pdb
+C:\Documents and Settings\Luca\Documenti\Visual Studio 2008\Projects\4 E\porta parallela\appboard\appboard\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Luca\Documenti\Visual Studio 2008\Projects\4 E\porta parallela\appboard\appboard\obj\Debug\appboard.Form1.resources
+C:\Documents and Settings\Luca\Documenti\Visual Studio 2008\Projects\4 E\porta parallela\appboard\appboard\obj\Debug\appboard.Properties.Resources.resources
+C:\Documents and Settings\Luca\Documenti\Visual Studio 2008\Projects\4 E\porta parallela\appboard\appboard\obj\Debug\appboard.csproj.GenerateResource.Cache
+C:\Documents and Settings\Luca\Documenti\Visual Studio 2008\Projects\4 E\porta parallela\appboard\appboard\obj\Debug\appboard.exe
+C:\Documents and Settings\Luca\Documenti\Visual Studio 2008\Projects\4 E\porta parallela\appboard\appboard\obj\Debug\appboard.pdb
+C:\Users\LUCA.PARISI\Desktop\porta parallela\appboard\appboard\obj\Debug\appboard.exe
+C:\Users\LUCA.PARISI\Desktop\porta parallela\appboard\appboard\obj\Debug\appboard.pdb
+C:\Users\LUCA.PARISI\Desktop\porta parallela\appboard\appboard\bin\Debug\appboard.exe
+C:\Users\LUCA.PARISI\Desktop\porta parallela\appboard\appboard\bin\Debug\appboard.pdb
+C:\Users\LUCA.PARISI\Desktop\porta parallela\appboard\appboard\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\LUCA.PARISI\Desktop\porta parallela\appboard\appboard\obj\Debug\appboard.Form1.resources
+C:\Users\LUCA.PARISI\Desktop\porta parallela\appboard\appboard\obj\Debug\appboard.Properties.Resources.resources
+C:\Users\LUCA.PARISI\Desktop\porta parallela\appboard\appboard\obj\Debug\appboard.csproj.GenerateResource.Cache
+C:\Documents and Settings\Luca\Documenti\Visual Studio 2008\Projects\4 E\porta parallela\appboard\appboard\obj\Debug\appboard.Form2.resources

@@ -1,0 +1,267 @@
+#include <stdio.h>
+#include <pthread.h>
+#define num_giocatori 7 //7 giocatori: 3 Cacciatori, 2 Battitori, un Portiere e un Cercatore
+
+typedef char* String;
+
+//tipo di dato Team
+typedef enum team {GRIFONDORO,SERPEVERDE,NESSUNA} Team;
+
+typedef enum giocatore {NESSUNO,CACCIATORE,BATTITORE,PORTIERE,CERCATORE} Giocatore;
+
+//dati incapsulati dal monitor
+typedef struct
+{ 
+	Team squadra;
+	pthread_mutex_t lock;
+	int in_campo, in_attesa_entra, in_attesa_esci;
+	pthread_cond_t attesa_entra;
+	pthread_cond_t attesa_esci;
+	Giocatore g[num_giocatori];
+}quidditch;
+
+//signature delle funzioni
+void init (quidditch *);
+void entra_campo (quidditch *, Team, Giocatore );
+Giocatore esci_campo (quidditch *);
+void *Grifondoro (void *);
+void *Serpeverde (void *);
+
+// Inizializza le variabili del monitor
+void init (quidditch *b)
+{
+	pthread_mutex_init (&b->lock, NULL);
+	pthread_cond_init (&b->attesa_entra, NULL);
+	pthread_cond_init (&b->attesa_esci, NULL);
+	b->in_campo=0;
+	b->in_attesa_entra = 0;
+	b->in_attesa_esci = 0;
+	b->squadra = NESSUNA;
+}
+
+// ENTRA_CAMPO (entry procedure)
+void entra_campo (quidditch *b, Team s, Giocatore g)
+{ 
+	pthread_mutex_lock (&b->lock);
+	// controlla se c'è l'altra squadra in campo
+	while (b->squadra != s && b->in_campo > 0)
+	{
+		b->in_attesa_entra++;
+		pthread_cond_wait (&b->attesa_entra, &b->lock);
+	}
+	//aggiorno la situazione sul campo
+	b->squadra = s;
+	b->g[b->in_campo] = g;
+	b->in_campo++;
+	//libero le eventuali richieste in attesa di esci_campo
+	while(b->in_attesa_esci > 0)
+	{
+		pthread_cond_signal (&b->attesa_esci);
+		b->in_attesa_esci--;
+	}
+	pthread_mutex_unlock (&b->lock);
+	return;
+}
+
+//ESTRAZIONE (entry procedure)
+Giocatore esci_campo (quidditch *b)
+{ 
+	pthread_mutex_lock (&b->lock);
+	Giocatore output;
+	// controlla se c'è almeno un giocatore in campo (di qualsiasi squadra)
+	while (b->in_campo == 0)
+	{
+		b->in_attesa_esci++;
+		pthread_cond_wait (&b->attesa_esci, &b->lock);
+	}
+	//esce giocatore dal campo
+	b->in_campo--;
+	output = b->g[b->in_campo];
+	b->g[b->in_campo] = NESSUNO;
+	//se non c'è rimasto nessun giocatore in campo, azzero la variabile squadra
+	//e libero le eventuali altre richieste dei giocatori dell'altra squadra
+	//di entrare in campo
+	if(b->in_campo == 0)
+	{
+		while(b->in_attesa_entra > 0)
+		{
+			pthread_cond_signal (&b->attesa_entra);
+			b->in_attesa_entra--;
+		}
+		b->squadra = NESSUNA;
+	}	
+	pthread_mutex_unlock (&b->lock);
+	return output;
+}
+
+/* Programma di test: 2 thread (grifondoro e serpeverde)
+- entrambi i thread inseriscono n giocatori, poi fanno passare un po' di tempo
+  per permettere ai giocatori di allenarsi (sleep), e poi li fanno uscire
+*/
+
+quidditch campo;
+
+void *Grifondoro (void *data) //l'attributo data non viene usato
+{
+	printf("\nsono il thread Grifondoro, la mia squadra ha il permesso della professoressa McGranitt per potersi allenare quest oggi\n\n");
+	Team squadra = GRIFONDORO;
+	Giocatore g [num_giocatori] = {PORTIERE,
+					BATTITORE,
+					BATTITORE,
+					CERCATORE,
+					CACCIATORE,
+					CACCIATORE,
+					CACCIATORE};	
+
+	int i = 0;
+	for(i = 0; i < num_giocatori; i++)
+	{
+		entra_campo (&campo, squadra,g[i]);
+		switch (g[i])
+		{
+			case PORTIERE:
+			{
+				printf ("Thread grifondoro inserisce --> Portiere\n");	
+				break;
+			}
+			case BATTITORE:
+			{
+				printf ("Thread grifondoro inserisce --> Battitore\n");	
+				break;
+			}
+			case CACCIATORE:
+			{
+				printf ("Thread grifondoro inserisce --> Cacciatore\n");	
+				break;
+			}
+			case CERCATORE:
+			{
+				printf ("Thread grifondoro inserisce --> Cercatore\n");	
+				break;
+			}
+		}		
+	}
+	printf ("\nThread grifondoro si sta allenando (2 secondi)\n");
+	sleep(2);
+	printf ("\nThread grifondoro ha finito di allenarsi\n");
+	Giocatore uscito;	
+	for(i = 0; i < num_giocatori; i++)
+	{	
+		uscito = esci_campo (&campo);
+		switch (uscito)
+		{
+			case PORTIERE:
+			{
+				printf ("Thread grifondoro rimuove --> Portiere\n");	
+				break;
+			}
+			case BATTITORE:
+			{
+				printf ("Thread grifondoro rimuove --> Battitore\n");	
+				break;
+			}
+			case CACCIATORE:
+			{
+				printf ("Thread grifondoro rimuove --> Cacciatore\n");		
+				break;
+			}
+			case CERCATORE:
+			{
+				printf ("Thread grifondoro rimuove --> Cercatore\n");	
+				break;
+			}
+		}	
+	}
+	return NULL;
+}
+
+void *Serpeverde (void *data) //l'attributo data non viene usato
+{ 
+	printf("\nsono il thread Serpeverde, la mia squadra ha il permesso del professor Piton per potersi allenare quest oggi.\n\n");
+	Team squadra = SERPEVERDE;
+	Giocatore g [num_giocatori] = {CACCIATORE,
+					PORTIERE,
+					BATTITORE,
+					CACCIATORE,
+					BATTITORE,
+					CERCATORE,
+					CACCIATORE};
+	
+	int i = 0;
+	for(i = 0; i < num_giocatori; i++)
+	{	
+		entra_campo (&campo, squadra,g[i]);
+		switch (g[i])
+		{
+			case PORTIERE:
+			{
+				printf ("Thread serpeverde inserisce --> Portiere\n");	
+				break;
+			}
+			case BATTITORE:
+			{
+				printf ("Thread serpeverde inserisce --> Battitore\n");	
+				break;
+			}
+			case CACCIATORE:
+			{
+				printf ("Thread serpeverde inserisce --> Cacciatore\n");	
+				break;
+			}
+			case CERCATORE:
+			{
+				printf ("Thread serpeverde inserisce --> Cercatore\n");	
+				break;
+			}
+		}
+	}
+	printf ("\nThread serpeverde si sta allenando (2 secondi)\n");
+	sleep(2);
+	printf ("\nThread serpeverde ha finito di allenarsi\n");
+	Giocatore uscito;
+	for(i = 0; i < num_giocatori; i++)
+	{
+		uscito = esci_campo (&campo);
+		switch (uscito)
+		{
+			case PORTIERE:
+			{
+				printf ("Thread serpeverde rimuove --> Portiere\n");	
+				break;
+			}
+			case BATTITORE:
+			{
+				printf ("Thread serpeverde rimuove --> Battitore\n");	
+				break;
+			}
+			case CACCIATORE:
+			{
+				printf ("Thread serpeverde rimuove --> Cacciatore\n");		
+				break;
+			}
+			case CERCATORE:
+			{
+				printf ("Thread serpeverde rimuove --> Cercatore\n");	
+				break;
+			}
+		}		
+	}
+	return NULL;
+}
+
+int main (void)
+{
+	//2 thread, th_a è il produttore, th_b è il consumatore
+	pthread_t th_a, th_b;
+	void *retval;
+	//inizializza monitor
+	init (&campo);
+	// Creazione threads:
+	pthread_create (&th_a, NULL, Grifondoro, 0);
+	pthread_create (&th_b, NULL, Serpeverde, 0);
+	// Attesa teminazione threads creati:
+	pthread_join (th_a, &retval);
+	pthread_join (th_b, &retval);
+	return 0;
+}
+

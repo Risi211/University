@@ -1,0 +1,86 @@
+/* 
+ * File:   main.cpp
+ * Author: ideato
+ *
+ * Created on June 4, 2014, 10:16 AM
+ */
+
+#include <cstdlib>
+#include <mpi.h>
+
+using namespace std;
+
+/*
+variabili:
+ massimo peso zaino
+ lista di struct cibi (nome, peso, calorie),
+    (tutti i cibi sono solidi, in cima alla montagna c'è una fontana)
+ vettore valori di fitness, stesso indice indica il cibo
+ 
+*/
+
+int main(int argc, char** argv) {
+
+  int rank, size;
+ 
+  //da fare controllo numero di processi
+  
+  //prima di creare la zona parallela, il master legge tutti i parametri
+  //file di cibi
+  //massimo peso zaino
+  
+  
+  MPI_Init (&argc, &argv);      /* starts MPI */
+  MPI_Comm_rank (MPI_COMM_WORLD, &rank);        /* get current process id */
+  MPI_Comm_size (MPI_COMM_WORLD, &size);        /* get number of processes */    
+  
+  //master:
+  //il master assegna ai processi slave il loro seme utilizzato per la
+  //generazione dei numeri random
+  
+  //il master fa un ciclo while e rimane in sleep finchè tutti i processi
+  //slave non gli danno il loro cromosoma migliore
+  
+  //quando riceve tutti i cromosomi migliori,
+  //calcola la funzione di fitness e poi stampa il cromosoma migliore
+  
+  //---------------------------------------------------------------------------
+  
+  //slave:
+  //fa l'inizializzazione della popolazione con 8 cromosomi random
+  
+  //inizio loop:
+  
+  //per ogni cromosoma, calcola la funzione di fitness
+  
+  //ordina il vettore di fitness
+  
+  //a = cromosoma migliore (valore massimo funzione di fitness)
+  //b = secondo cromosoma migliore 
+  //c = random scelto tra gli altri disponibili
+  //d = random scelto tra gli altri disponibili
+    
+  //fai crossover:
+  //e = a (crosover) c
+  //f = b (crossover) d
+  
+  //si hanno cos' 6 soluzioni
+  //a,b,c,d,e,f
+  
+  //fai la mutazione su (b)
+  
+  //spedisci la soluzione (a) a tutti gli altri processi
+  
+  //ricevi la sol. migliore dagli altri processi
+  //si aggiungono alle 6 soluzioni precedenti
+  
+  //fine loop
+  
+  //comunica al master il cromosoma migliore
+  
+  MPI_Finalize();
+  
+  return 0;
+}
+
+

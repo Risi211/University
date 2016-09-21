@@ -1,0 +1,29 @@
+C:\Documents and Settings\Luca\Impostazioni locali\Dati applicazioni\Temporary Projects\ProgettoDatabase\bin\Debug\ProgettoDatabase.exe
+C:\Documents and Settings\Luca\Impostazioni locali\Dati applicazioni\Temporary Projects\ProgettoDatabase\bin\Debug\ProgettoDatabase.pdb
+C:\Documents and Settings\Luca\Impostazioni locali\Dati applicazioni\Temporary Projects\ProgettoDatabase\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Luca\Impostazioni locali\Dati applicazioni\Temporary Projects\ProgettoDatabase\obj\x86\Debug\MainWindow.baml
+C:\Documents and Settings\Luca\Impostazioni locali\Dati applicazioni\Temporary Projects\ProgettoDatabase\obj\x86\Debug\MainWindow.g.cs
+C:\Documents and Settings\Luca\Impostazioni locali\Dati applicazioni\Temporary Projects\ProgettoDatabase\obj\x86\Debug\App.g.cs
+C:\Documents and Settings\Luca\Impostazioni locali\Dati applicazioni\Temporary Projects\ProgettoDatabase\obj\x86\Debug\ProgettoDatabase_MarkupCompile.cache
+C:\Documents and Settings\Luca\Impostazioni locali\Dati applicazioni\Temporary Projects\ProgettoDatabase\obj\x86\Debug\ProgettoDatabase.g.resources
+C:\Documents and Settings\Luca\Impostazioni locali\Dati applicazioni\Temporary Projects\ProgettoDatabase\obj\x86\Debug\ProgettoDatabase.Properties.Resources.resources
+C:\Documents and Settings\Luca\Impostazioni locali\Dati applicazioni\Temporary Projects\ProgettoDatabase\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Luca\Impostazioni locali\Dati applicazioni\Temporary Projects\ProgettoDatabase\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Luca\Impostazioni locali\Dati applicazioni\Temporary Projects\ProgettoDatabase\obj\x86\Debug\ProgettoDatabase.exe
+C:\Documents and Settings\Luca\Impostazioni locali\Dati applicazioni\Temporary Projects\ProgettoDatabase\obj\x86\Debug\ProgettoDatabase.pdb
+C:\Documents and Settings\Luca\Desktop\Paradigmi\PROVA\ProgettoDatabase\ProgettoDatabase\obj\x86\Debug\ProgettoDatabase.exe
+C:\Documents and Settings\Luca\Desktop\Paradigmi\PROVA\ProgettoDatabase\ProgettoDatabase\obj\x86\Debug\ProgettoDatabase.pdb
+C:\Documents and Settings\Luca\Desktop\Paradigmi\PROVA\ProgettoDatabase\ProgettoDatabase\bin\Debug\ProgettoDatabase.exe
+C:\Documents and Settings\Luca\Desktop\Paradigmi\PROVA\ProgettoDatabase\ProgettoDatabase\bin\Debug\ProgettoDatabase.pdb
+C:\Documents and Settings\Luca\Desktop\Paradigmi\PROVA\ProgettoDatabase\ProgettoDatabase\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Luca\Desktop\Paradigmi\PROVA\ProgettoDatabase\ProgettoDatabase\obj\x86\Debug\MainWindow.baml
+C:\Documents and Settings\Luca\Desktop\Paradigmi\PROVA\ProgettoDatabase\ProgettoDatabase\obj\x86\Debug\MainWindow.g.cs
+C:\Documents and Settings\Luca\Desktop\Paradigmi\PROVA\ProgettoDatabase\ProgettoDatabase\obj\x86\Debug\App.g.cs
+C:\Documents and Settings\Luca\Desktop\Paradigmi\PROVA\ProgettoDatabase\ProgettoDatabase\obj\x86\Debug\ProgettoDatabase_MarkupCompile.cache
+C:\Documents and Settings\Luca\Desktop\Paradigmi\PROVA\ProgettoDatabase\ProgettoDatabase\obj\x86\Debug\ProgettoDatabase.g.resources
+C:\Documents and Settings\Luca\Desktop\Paradigmi\PROVA\ProgettoDatabase\ProgettoDatabase\obj\x86\Debug\ProgettoDatabase.Properties.Resources.resources
+C:\Documents and Settings\Luca\Desktop\Paradigmi\PROVA\ProgettoDatabase\ProgettoDatabase\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Luca\Desktop\Paradigmi\PROVA\ProgettoDatabase\ProgettoDatabase\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Luca\Desktop\Paradigmi\PROVA\ProgettoDatabase\ProgettoDatabase\obj\x86\Debug\ProgettoDatabase.OP1Form.resources
+C:\Documents and Settings\Luca\Desktop\Paradigmi\PROVA\ProgettoDatabase\ProgettoDatabase\obj\x86\Debug\ProgettoDatabase.Form2.resources
+C:\Documents and Settings\Luca\Desktop\Paradigmi\PROVA\ProgettoDatabase\ProgettoDatabase\obj\x86\Debug\ProgettoDatabase.Form_Carico.resources

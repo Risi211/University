@@ -1,0 +1,83 @@
+ACQUISIZIONE DATI
+
+Progetto di acquisizione dati dall'application board mediante utilizzo della porta parallela.
+
+Logica di funzionamento
+
+Si impiega un contatore software che va da 0 a 255, perciò è rappresentabile sugli 8 bit del registro dati (DR) della porta parallela. Viene effettuata una out di questo valore sulla porta parallela, precisamente in DR che è collegato al DAC dell'application board. Il DAC porta il corrispondente valore analogico del contatore sul comparatore, il cui altro segnale è fornito attraverso il potenziometro presente sull'application board. Effettuata la comparazione, il risultato di questa sarà visibile sul bit 7 di SR (che funziona in logica negata). Questo varrà 1 quando i 2 valori applicati sul comparatore si equivarranno, perciò si potrà stampare il valore del contatore come valore d'ingresso fornito dal potenziometro.  Viceversa si dovrà incrementare il contatore fino a quando non si verificherà la suddetta condizione.
+
+
+PORTA PARALLELA (richiamo registri ed indirizzi)
+
+La porta parallela può essere vista come un insieme di 3 registri ad 8 bit ciascuno, mappati a partire da un indirizzo che solitamente è il 0378h e che corrisponde al registro DATI (chiamato anche registro base in ragione del suo indirizzo). Ecco la struttura generale dei registri della porta parallela:
+
+Nome registro	Indirizzo usuale	Modalità funz.	Dimensione
+Dati (DR o base)	0378h	OUT	8 bit
+Stato (SR)	0379h	IN	8 bit
+Controllo (CR)	037Ah	IN/OUT	8 bit
+
+
+
+RISCALDATORE
+
+Il bit che comanda il riscaldatore è il 5 del port 1B0h, corrispondente al bit di peso 1 del registro di controllo della porta parallela. Poiché questo bit è in logica invertita, ne consegue che:
+
+·	Riscaldatore acceso:		OUT su CR (037Ah) del valore 00000000b
+
+·	Riscaldatore spento:		OUT su CR (037Ah) del valore 00000010b
+
+
+
+MOTORINO
+
+Anche questo dispositivo è mappato all'indirizzo del registro di controllo della porta parallela, e precisamente ai bit di peso 2 e 3.  Per determinare l'accensione del motorino, i segnali inviati ai due bit di cui sopra devono essere l'uno l'inverso dell'altro, per spegnerlo è sufficiente che siano uguali. Queste considerazioni vanno rapportate tuttavia alla logica dei singoli bit del registro di controllo, in particolare si dovrà tenere conto che il bit di peso 3 ha logica negata. Ne deriva quanto segue:
+
+·	Motore spento:				OUT su CR (037Ah) del valore 00001000b
+oppure 					OUT su CR (037Ah) del valore 00000100b
+
+·	Motore acceso (rotazione in senso orario):	OUT su CR (037Ah) del valore 00000000b
+
+·	Motore acceso (rotazione senso antiorario):	OUT su CR (037Ah) del valore 00001100b
+
+
+
+
+
+
+
+
+
+
+DIP-SWITCH
+
+Lettura stato dip-switch presenti sull'application board.
+
+Premessa: i registri da utilizzare sono SR (registro di stato, ind. 0379h) che funziona in modalità IN (è di sola lettura), e CR (registro di controllo, ind. 037Ah) che funziona in input a condizione che vengano poste preventivamente alte le sue uscite (poiché sono di tipo open collector, occorrerà effettuare una OUT su CR di 0100b, in quanto 3 bit hanno logica negativa).
+
+I bit provenienti dai 2 registri dovranno essere opportunamente combinati in modo da ottenere un byte corrispondente allo stato on/off dei singoli dip-switch presenti sulla scheda. In particolare si fa presente che ogni registro fornirà 4 bit degli 8 complessivi e più precisamente:
+
+SR fornirà i 4 bit meno significativi (ovvero lo stato degli switch più a destra)
+
+CR fornirà i 4 bit più significativi (ovvero lo stato degli switch più a sinistra).
+
+La costruzione del byte d'ingresso viene realizzata in questo modo:
+
+	Switch 7	Switch 6	Switch 5	Switch 4	Switch 3	Switch 2	Switch 1	Switch 0
+Registro	Bit 7	Bit 6	Bit 5	Bit 4	Bit 3	Bit 2	Bit 1	Bit 0
+SR (0379h)					7	5	4	3
+CR (037Ah)	3	2	1	0				
+
+
+
+VARIE
+
+Significato di alcuni bit presenti sui registri.
+
+
+Registro	Bit 7	Bit 6	Bit 5	Bit 4	Bit 3	Bit 2	Bit 1	Bit 0
+SR (0379h)		Infra-Red						
+CR (037Ah)								
+
+Infra-Red Beam:
+0 beam oscurato
+1 beam non oscurato

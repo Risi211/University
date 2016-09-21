@@ -1,0 +1,78 @@
+#!/bin/bash
+
+OPTIONS="1 2 3 4 5 6"
+
+select opt in $OPTIONS; do
+if [ "$opt" = "1" ] 
+then
+lsmod | awk '{ print $3 }' | grep -v Used > tmp.txt;
+totali=$(cat tmp.txt | wc -l);
+echo totali = $totali;
+rm tmp.txt
+
+elif [ "$opt" = "2" ] 
+then
+lsmod | awk '{ print $3 }' | grep -v Used > tmp.txt;
+utilizzati=$(cat tmp.txt | grep -vc "^0$");
+echo utilizzati = $utilizzati;
+rm tmp.txt
+
+elif [ "$opt" = "3" ]
+then
+lsmod |awk '($3 > 0) {print $2}' | grep -v Size > tmp.txt;
+F=`cat tmp.txt`
+sommaUsed=0;
+for x in $F
+do
+let sommaUsed=sommaUsed+$x;
+done
+echo somma= $sommaUsed; 
+rm tmp.txt
+
+elif [ "$opt" = "4" ]
+then 
+blue=$(lsmod | grep bluetooth);
+if [ -z "$blue" ]
+then 
+echo non è presente bluetooth
+else
+echo bluetooth presente
+fi
+
+elif [ "$opt" = "5" ]
+then
+
+lsmod | awk '{ print $3 }' | grep -v Used > tmp.txt;
+totali=$(cat tmp.txt | wc -l);
+echo totali = $totali;
+
+utilizzati=$(cat tmp.txt | grep -vc "^0$");
+echo utilizzati = $utilizzati;
+
+lsmod |awk '($3 > 0) {print $2}' | grep -v Size > tmp.txt;
+F=`cat tmp.txt`
+sommaUsed=0;
+for x in $F
+do
+let sommaUsed=sommaUsed+$x;
+done
+echo somma= $sommaUsed; 
+
+blue=$(lsmod | grep bluetooth);
+if [ -z "$blue" ]
+then 
+echo non è presente bluetooth
+else
+echo bluetooth presente
+fi
+rm tmp.txt
+
+elif [ "$opt" = "6" ]
+then
+echo uscita
+exit
+
+else
+echo bad option
+fi
+done

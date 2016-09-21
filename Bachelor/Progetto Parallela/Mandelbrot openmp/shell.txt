@@ -1,0 +1,50 @@
+Compilare:
+
+g++ main.cpp src/EasyBMP.cpp -fopenmp -o a.out
+
+Eseguire:
+
+./a.out
+
+Output:
+
+settati 4 threads
+
+tempo calcolo parallelo: 0.180000 secondi
+
+------------------------------------------------------------
+
+Eseguire:
+
+./a.out -width 1000 -height 1000 -max_i 10000
+
+Output:
+
+settati 4 threads
+
+tempo calcolo parallelo: 36.310000 secondi
+
+------------------------------------------------------------
+
+Eseguire:
+
+./a.out --help
+
+Output:
+
+parametri disponibili: 
+
+  -zoom <value> setti lo zoom da fare sull'immagine di Mandelbrot (positivo / negativo, double)
+
+  -moveX <value> setti lo scostamento da dare all'asse X (positivo / negativo, double)
+
+  -moveY <value> setti lo scostamento da dare all'asse Y (positivo / negativo, double)
+
+  -bmp <value> setti il percorso di salvataggio del file di output bmp (se metti solo il nome del file lo salva nella cartella dove viene eseguito il programma)
+
+  -width <value> setti la width dell'immagine di output (positivo, int)
+
+  -height <value> setti la height dell'immagine di output (positivo, int)
+
+  -max_i <value> setti il massimo numero di iterazioni per stabilire se il punto appartiene all'insieme di Mandelbrot o no (positivo, int)
+

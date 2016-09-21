@@ -1,0 +1,11 @@
+Nome Problema        Colonne     Righe        Costo Soluzione
+
+LP5.DAT                  700        50              184.028
+LP6.DAT                  700        50              130.197
+LP11.DAT                 800       170             1402.73
+LP20.DAT                 200        70            -9367.31
+LP21.DAT                1000       100          Illimitata
+LP22.DAT                 700        50              -23.4387
+LP23.DAT                 700        50              177.448
+AFIRO.DAT                 32        27             -467.657
+BLEND.DAT                 83        74              -27.296

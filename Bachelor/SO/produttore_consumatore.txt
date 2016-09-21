@@ -1,0 +1,144 @@
+#include <stdio.h>
+#include <pthread.h>
+#define BUFFER_SIZE 5
+
+typedef char* String;
+
+//dati incapsulati dal monitor
+typedef struct
+{ 
+	char buffer[BUFFER_SIZE];
+	pthread_mutex_t lock;
+	int readpos, writepos;
+	int cont;
+	pthread_cond_t notempty;
+	pthread_cond_t notfull;
+}prodcons;
+
+//signature delle funzioni
+void init (prodcons *);
+void inserisci (prodcons *, char);
+char estrai (prodcons *);
+void *producer (void *);
+void *consumer (void *);
+
+
+// Inizializza le variabili del monitor
+void init (prodcons *b)
+{
+	pthread_mutex_init (&b->lock, NULL);
+	pthread_cond_init (&b->notempty, NULL);
+	pthread_cond_init (&b->notfull, NULL);
+	b->cont=0;
+	b->readpos = 0;
+	b->writepos = 0;
+}
+
+// INSERIMENTO (entry procedure)
+void inserisci (prodcons *b, char data)
+{ 
+	pthread_mutex_lock (&b->lock);
+	// controlla che il buffer non sia pieno
+	while ( b->cont==BUFFER_SIZE)
+	pthread_cond_wait (&b->notfull, &b->lock);
+	// scrivi data e aggiorna lo stato del buffer
+	b->buffer[b->writepos] = data;
+	b->cont++;
+	b->writepos++;
+	if (b->writepos >= BUFFER_SIZE)
+	b->writepos = 0;
+	// risveglia eventuali thread (consumatori) sospesi
+	pthread_cond_signal (&b->notempty);
+	pthread_mutex_unlock (&b->lock);
+}
+
+//ESTRAZIONE (entry procedure)
+char estrai (prodcons *b)
+{ 
+	char data;
+	pthread_mutex_lock (&b->lock);
+	//finchè il buffer e` vuoto fai la wait
+	while (b->cont==0) 
+	{
+		pthread_cond_wait (&b->notempty, &b->lock);
+	}	
+	// Leggi l'elemento e aggiorna lo stato del buffer
+	data = b->buffer[b->readpos];
+	b->cont--;
+	b->readpos++;
+	if (b->readpos >= BUFFER_SIZE)
+	b->readpos = 0;
+	// Risveglia eventuali threads (produttori) sospesi:
+	pthread_cond_signal (&b->notfull);
+	pthread_mutex_unlock (&b->lock);
+	return data;
+}
+
+/* Programma di test: 2 thread
+- un thread inserisce sequenzialmente max caratteri,
+- l'altro thread li estrae sequenzialmente per stamparli */
+
+#define OVER (-1)
+#define max 20
+
+prodcons buffer;
+
+void *producer (void *data)
+{
+	printf("sono il thread produttore\n\n");
+	String prova = "testo da provare con il costrutto dei monitor";
+	int length = 45; //numero di caratteri di prova
+	int i = 0;
+	for(i = 0; i < length; i++)
+	{
+		if(prova[i] == ' ')
+		{
+			printf ("Thread produttore inserisce --> (spazio)\n");
+		}
+		else
+		{
+			printf ("Thread produttore inserisce --> %c\n", prova[i]);
+		}		
+		inserisci (&buffer, prova[i]);
+	}
+	printf ("Thread produttore inserisce -1 --->\n");
+	inserisci (&buffer, OVER); //terminatore stringa (-1)
+	return NULL;
+}
+
+void *consumer (void *data)
+{ 
+	char c;
+	printf("sono il thread consumatore \n\n");
+	while (1)
+	{
+		c = estrai (&buffer);
+		if (c == OVER) //se estraggo il -1, ho finito
+		break;
+		if(c == ' ')
+		{
+			printf("Thread consumatore estrae: --> (spazio)\n");
+		}
+		else
+		{
+			printf("Thread consumatore estrae: --> %c\n", c);
+		}
+	}
+	return NULL;
+}
+
+int main (void)
+{
+	//2 thread, th_a è il produttore, th_b è il consumatore
+	pthread_t th_a, th_b;
+	void *retval;
+	//inizializza monitor
+	init (&buffer);
+	// Creazione threads:
+	pthread_create (&th_a, NULL, producer, 0);
+	pthread_create (&th_b, NULL, consumer, 0);
+	// Attesa teminazione threads creati:
+	pthread_join (th_a, &retval);
+	pthread_join (th_b, &retval);
+	return 0;
+}

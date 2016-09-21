@@ -1,0 +1,24 @@
+C:\Documents and Settings\Luca\Documenti\Visual Studio 2008\Projects\Crypto\Crypto\bin\Debug\Crypto.exe
+C:\Documents and Settings\Luca\Documenti\Visual Studio 2008\Projects\Crypto\Crypto\bin\Debug\Crypto.pdb
+C:\Documents and Settings\Luca\Documenti\Visual Studio 2008\Projects\Crypto\Crypto\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Luca\Documenti\Visual Studio 2008\Projects\Crypto\Crypto\obj\Debug\Crypto.Form1.resources
+C:\Documents and Settings\Luca\Documenti\Visual Studio 2008\Projects\Crypto\Crypto\obj\Debug\Crypto.Properties.Resources.resources
+C:\Documents and Settings\Luca\Documenti\Visual Studio 2008\Projects\Crypto\Crypto\obj\Debug\Crypto.csproj.GenerateResource.Cache
+C:\Documents and Settings\Luca\Documenti\Visual Studio 2008\Projects\Crypto\Crypto\obj\Debug\Crypto.exe
+C:\Documents and Settings\Luca\Documenti\Visual Studio 2008\Projects\Crypto\Crypto\obj\Debug\Crypto.pdb
+F:\Crypto\Crypto\obj\Debug\Crypto.exe
+F:\Crypto\Crypto\obj\Debug\Crypto.pdb
+F:\Crypto\Crypto\bin\Debug\Crypto.exe
+F:\Crypto\Crypto\bin\Debug\Crypto.pdb
+F:\Crypto\Crypto\obj\Debug\ResolveAssemblyReference.cache
+F:\Crypto\Crypto\obj\Debug\Crypto.Form1.resources
+F:\Crypto\Crypto\obj\Debug\Crypto.Properties.Resources.resources
+F:\Crypto\Crypto\obj\Debug\Crypto.csproj.GenerateResource.Cache
+C:\Documents and Settings\Luca\Desktop\Crypto\Crypto\obj\Debug\Crypto.exe
+C:\Documents and Settings\Luca\Desktop\Crypto\Crypto\obj\Debug\Crypto.pdb
+C:\Documents and Settings\Luca\Desktop\Crypto\Crypto\bin\Debug\Crypto.exe
+C:\Documents and Settings\Luca\Desktop\Crypto\Crypto\bin\Debug\Crypto.pdb
+C:\Documents and Settings\Luca\Desktop\Crypto\Crypto\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Luca\Desktop\Crypto\Crypto\obj\Debug\Crypto.Form1.resources
+C:\Documents and Settings\Luca\Desktop\Crypto\Crypto\obj\Debug\Crypto.Properties.Resources.resources
+C:\Documents and Settings\Luca\Desktop\Crypto\Crypto\obj\Debug\Crypto.csproj.GenerateResource.Cache

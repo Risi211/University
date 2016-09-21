@@ -1,0 +1,8 @@
+countdownlatch e barrier in java
+
+mandel02, Master.java, changeState, solo l'Event Dispatcher Thread può cambiare i componennti grafici,
+per evitare corse critiche. (SwingUtilities.invokeLater....)
+
+mandel03, approccio per gameOfLife, risolto con gli Executor.
+Il master crea un executor.
+ComputeStripeTask 

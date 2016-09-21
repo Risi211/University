@@ -1,0 +1,25 @@
+C:\Documents and Settings\Luca\Desktop\ClassLibrary1\ClassLibrary1\bin\Release\ClassLibrary1.dll
+C:\Documents and Settings\Luca\Desktop\ClassLibrary1\ClassLibrary1\bin\Release\ClassLibrary1.pdb
+C:\Documents and Settings\Luca\Desktop\ClassLibrary1\ClassLibrary1\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Luca\Desktop\ClassLibrary1\ClassLibrary1\obj\Release\ClassLibrary1.dll
+C:\Documents and Settings\Luca\Desktop\ClassLibrary1\ClassLibrary1\obj\Release\ClassLibrary1.pdb
+C:\Documents and Settings\Luca\Desktop\Input Listener\ClassLibrary1\ClassLibrary1\bin\Release\ClassLibrary1.dll
+C:\Documents and Settings\Luca\Desktop\Input Listener\ClassLibrary1\ClassLibrary1\bin\Release\ClassLibrary1.pdb
+C:\Documents and Settings\Luca\Desktop\Input Listener\ClassLibrary1\ClassLibrary1\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Luca\Desktop\Input Listener\ClassLibrary1\ClassLibrary1\obj\Release\ClassLibrary1.dll
+C:\Documents and Settings\Luca\Desktop\Input Listener\ClassLibrary1\ClassLibrary1\obj\Release\ClassLibrary1.pdb
+C:\Documents and Settings\Luca\Desktop\Input Listener beta\ClassLibrary1\ClassLibrary1\bin\Release\ClassLibrary1.dll
+C:\Documents and Settings\Luca\Desktop\Input Listener beta\ClassLibrary1\ClassLibrary1\bin\Release\ClassLibrary1.pdb
+C:\Documents and Settings\Luca\Desktop\Input Listener beta\ClassLibrary1\ClassLibrary1\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Luca\Desktop\Input Listener beta\ClassLibrary1\ClassLibrary1\obj\Release\ClassLibrary1.dll
+C:\Documents and Settings\Luca\Desktop\Input Listener beta\ClassLibrary1\ClassLibrary1\obj\Release\ClassLibrary1.pdb
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1\ClassLibrary1\ClassLibrary1\bin\Release\ClassLibrary1.dll
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1\ClassLibrary1\ClassLibrary1\bin\Release\ClassLibrary1.pdb
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1\ClassLibrary1\ClassLibrary1\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1\ClassLibrary1\ClassLibrary1\obj\Release\ClassLibrary1.dll
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1\ClassLibrary1\ClassLibrary1\obj\Release\ClassLibrary1.pdb
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1 Beta\ClassLibrary1\ClassLibrary1\bin\Release\ClassLibrary1.dll
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1 Beta\ClassLibrary1\ClassLibrary1\bin\Release\ClassLibrary1.pdb
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1 Beta\ClassLibrary1\ClassLibrary1\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1 Beta\ClassLibrary1\ClassLibrary1\obj\Release\ClassLibrary1.dll
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1 Beta\ClassLibrary1\ClassLibrary1\obj\Release\ClassLibrary1.pdb

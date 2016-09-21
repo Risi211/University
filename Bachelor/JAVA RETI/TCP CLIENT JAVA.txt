@@ -1,0 +1,95 @@
+import java.net.*;
+import java.io.*;
+
+public class TCPClient 
+{
+	Socket sock; 
+	OutputStream sendStream;
+	InputStream recvStream; 
+	String request;    
+	String response;    
+	static BufferedReader inFromUser;
+
+	TCPClient (String server, int port) throws IOException, UnknownHostException   
+	{
+	sock = new Socket (server, port);  
+	sendStream = sock.getOutputStream ();  
+	recvStream = sock.getInputStream ();
+	} // Fine costruttore   
+
+	void makeRequest () 
+	{
+		// crea la richiesta
+		try
+		{		
+			request = inFromUser.readLine(); 	
+		}		
+		catch (IOException ex)
+		{
+			System.err.println ("IOException in makeRequest");
+		}	
+	} // Fine makeRequest
+	
+	void sendRequest () 
+	{
+		try
+		{
+			byte [] sendBuff = new byte [request.length ()];
+			sendBuff = request.getBytes ();
+			sendStream.write (sendBuff, 0, sendBuff.length);
+			sendStream.flush();
+		}
+		catch (IOException ex)
+		{
+			System.err.println ("IOException in sendRequest");
+		}
+	} // Fine sendRequest   
+	
+	void getResponse () 
+	{ 
+		try
+		{
+			int dataSize;
+			byte [] recvBuff = new byte [1024];
+			dataSize = recvStream.read (recvBuff, 0, 1024);
+			response = new String (recvBuff, 0, dataSize);
+		}
+		catch (IOException ex)
+		{
+			System.err.println ("IOException in getResponse"); 
+		}
+	} // Fine getResponse  
+
+	void useResponse () 
+	{
+		System.out.println("Response: " + response);
+	} // Fine userResponse
+
+	void close () 
+	{
+		try
+		{
+		sendStream.close ();
+		recvStream.close ();
+		sock.close ();
+		}
+		catch (IOException ex)
+		{
+			System.err.println ("IOException in close"); 
+		}
+	} // Fine close
+
+	public static void main (String [] args) throws IOException 
+	{  
+		final int servPort = 6789;	
+		final String servName = "127.0.0.1";	
+		inFromUser = new BufferedReader(new InputStreamReader(System.in));	
+		TCPClient client = new TCPClient (servName, servPort);        
+		client.makeRequest (); 
+		client.sendRequest ();  
+		client.getResponse ();  
+		client.useResponse ();
+		client.close ();
+	} // Fine of main   
+	
+} // Fine classe TCPClient

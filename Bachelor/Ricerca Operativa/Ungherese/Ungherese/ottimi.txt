@@ -1,0 +1,10 @@
+Nome Problema		Costo Soluzione Ottima
+
+1.txt				    19
+2.txt				 87826
+3.txt				 66953
+4.txt				 78876
+5.txt				 82616
+6.txt				106669
+7.txt				100489
+8.txt				138520

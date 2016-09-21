@@ -1,0 +1,73 @@
+Come funziona la crittografia
+
+l'utente carica il file da crittografare e inserisce una chiave
+
+(di almeno 3 caratteri per rendere più efficente la cifratura)
+
+di ogni carattere della chiave viene preso il codice ascii corrispondente
+
+e vengono "allineati" ai byte del file da crittografare.
+
+Esempio: 10 byte del file e i caratteri della chiave
+
+128 23 56 90 65 24 12 01 87 245
+
+ipotizziamo che la chiave sia "ciao"
+
+  c  i  a  o  c  i  a  o  c   i
+
+Il metodo crittografico / decrittografico che viene utilizzato è il
+
+seguente 
+
+byte xor chiave = y; / y xor chiave = byte.
+
+Viene utilizzato un file stream per il caricamento e la scrittura dei
+
+file per non usare molta memoria RAM (ne risente un pochino il tempo
+
+di esecuzione)
+
+(appena ho incominciato a fare il programma facevo caricare tutti i 
+
+byte nella ram che venivano poi divisi in un vettore di byte, ma il
+
+programma generava un eccezione "Out of memory" se la grandezza del file
+
+era superiore alla portata della RAM)
+
+Anche l'estensione viene crittografata: ai singoli
+
+caratteri di essa vengono sostituiti il carattere che la segue nell'
+
+alfabeto. Quando viene decrittografata viene fatto il contrario.
+
+Per i casi limite (A,Z,a,z) si effettua la sostituzione fra essi.
+
+Non si può crittografare l'estensione allo stesso modo dei byte
+
+perchè il risultato può essere un carattere strano che non può essere
+
+nel nome del file, quindi il programma genera un eccezione.
+
+Consigli
+
+Se l'utente sposta il form durante il lavoro di un file "pesante"
+
+potrebbe venire fuori la scritta (non risponde) ma in realtà il
+
+programma funziona lo stesso, bisogna solo aspettare un po' di tempo,
+
+che dipende dalla grandezza del file.
+
+La lunghezza della chiave non interferisce quasi niente con il tempo
+
+di esecuzione del programma.
+
+Ci possono essere dei problemi se l'utente critta e decritta subito lo
+
+stesso file senza prima chiudere il programma (oltre al nome del file
+
+viene aggiunta anche l'estensione, ma il file è solo da rinominare,
+
+in realtà funziona perfettamente)

@@ -1,0 +1,19 @@
+per il terzo, usare lambda expressions con il callback delle interfacce
+
+Dish::getCalories è uguale a una lambda expression: (per scrivere di meno)
+
+.map(Dish::getCalories)
+.map((Dish d) -> d.getName())
+
+la lista sorgente di uno stream potrebbe essere infinita
+
+Optional<Dish> non è null, es si usa con findAny()
+
+finding trova un elemento, se vuoi il primo ci vuole findFirst()
+
+da java7, java8 modifica le classi e le interfacce
+(es. Array.stream(), quindi 
+necessità di mettere metodi di default)
+
+gli stream possono essere generati anche con la iterate (una funzione)
+dice qual è l prossimo elemento dello stream.

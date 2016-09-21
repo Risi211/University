@@ -1,0 +1,52 @@
+Installare g++:
+
+sudo apt-get install g++
+
+Compilare:
+
+g++ -Wall -std=c++0x -pthread main.cpp src/EasyBMP.cpp -o a6.out
+
+---------------------------------------------------------------
+
+Eseguire:
+
+./a6.out -num_threads 4 -width 1000 -height 1000 -max_i 10000
+
+Output:
+
+Settati 4 threads
+
+tempo calcolo parallelo: 1.680000 secondi
+
+Scritture dell'immagine su file bitmap...
+
+Done
+
+-----------------------------------------------------------------
+
+Eseguire:
+
+./a6.out --help
+
+Output:
+
+parametri disponibili: 
+
+  -zoom <value> setti lo zoom da fare sull'immagine di Julia (positivo / negativo, double)
+
+  -moveX <value> setti lo scostamento da dare all'asse X (positivo / negativo, double)
+
+  -moveY <value> setti lo scostamento da dare all'asse Y (positivo / negativo, double)
+
+  -bmp <value> setti il percorso di salvataggio del file di output bmp (se metti solo il nome del file lo salva nella cartella dove viene eseguito il programma)
+
+  -width <value> setti la width dell'immagine di output (positivo, int)
+
+  -height <value> setti la height dell'immagine di output (positivo, int)
+
+  -max_i <value> setti il massimo numero di iterazioni per stabilire se il punto appartiene all'insieme di Julia o no (positivo, int)
+
+  -c_reale <value> setti la parte reale del numero complesso che fa da seme per l'insieme di Julia (positivo / negativo, double)
+
+  -c_yota <value> setti la parte immaginaria del numero complesso che fa da seme per l'insieme di Julia (positivo / negativo, double)
+

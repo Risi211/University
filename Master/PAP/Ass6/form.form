@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel1" pref="451" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+              <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel1" pref="289" max="32767" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
+        <Property name="columns" type="int" value="10"/>
+        <Property name="rows" type="int" value="10"/>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JTextField" name="txt11">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt12">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt13">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt14">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt15">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt16">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt17">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt18">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt19">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt110">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt21">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt22">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt23">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt24">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt25">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt26">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt27">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt28">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt29">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt210">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt31">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt32">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt33">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt34">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt35">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt36">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt37">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt38">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt39">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt310">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt41">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt42">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt43">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt44">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt45">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt46">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt47">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt48">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt49">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt410">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt51">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt52">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt53">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt54">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt55">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt56">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt57">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt58">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt59">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt510">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt61">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt62">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt63">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt64">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt65">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt66">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt67">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt68">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt69">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt610">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt71">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt72">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt73">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt74">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt75">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt76">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt77">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt78">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt79">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt710">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt81">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt82">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt83">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt84">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt85">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt86">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt87">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt88">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt89">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt810">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt91">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt92">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt93">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt94">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt95">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt96">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt97">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt98">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt99">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt910">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt101">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt102">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt103">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt104">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt105">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt106">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt107">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt108">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt109">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt1010">
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JButton" name="jButton1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Start"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Stop"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Reset"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+    </Component>
+  </SubComponents>
+</Form>

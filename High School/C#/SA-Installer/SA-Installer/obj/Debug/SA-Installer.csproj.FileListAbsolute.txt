@@ -1,0 +1,8 @@
+C:\Documents and Settings\Luca\Desktop\SA-Installer\SA-Installer\bin\Debug\SA-Installer.exe
+C:\Documents and Settings\Luca\Desktop\SA-Installer\SA-Installer\bin\Debug\SA-Installer.pdb
+C:\Documents and Settings\Luca\Desktop\SA-Installer\SA-Installer\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Luca\Desktop\SA-Installer\SA-Installer\obj\Debug\SA_Installer.Form1.resources
+C:\Documents and Settings\Luca\Desktop\SA-Installer\SA-Installer\obj\Debug\SA_Installer.Properties.Resources.resources
+C:\Documents and Settings\Luca\Desktop\SA-Installer\SA-Installer\obj\Debug\SA-Installer.csproj.GenerateResource.Cache
+C:\Documents and Settings\Luca\Desktop\SA-Installer\SA-Installer\obj\Debug\SA-Installer.exe
+C:\Documents and Settings\Luca\Desktop\SA-Installer\SA-Installer\obj\Debug\SA-Installer.pdb

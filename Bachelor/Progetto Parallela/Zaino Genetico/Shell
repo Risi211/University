@@ -1,0 +1,14 @@
+tutorial MPI:
+https://computing.llnl.gov/tutorials/mpi/
+
+installare:
+sudo apt-get install libcr-dev mpich2 mpich2-doc
+
+Compilare: 
+mpicc main.cpp -o a.out -lstdc++ //per evitare errore di compilazione: c++ - What is __gxx_personality_v0
+
+Eseguire:
+mpirun -np 2 ./hello
+
+
+

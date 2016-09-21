@@ -1,0 +1,38 @@
+# Project: Battaglia_Navale
+# Makefile created by Dev-C++ 4.9.9.0
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = BattagliaNavale.o main.o Useful.o Th.o $(RES)
+LINKOBJ  = BattagliaNavale.o main.o Useful.o Th.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib"  
+INCS =  -I"C:/Documents and Settings/Luca/Desktop/progetti/Battaglia Navale"  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/include/c++/3.3.1"  -I"C:/Dev-Cpp/include/c++/3.3.1/mingw32"  -I"C:/Dev-Cpp/include/c++/3.3.1/backward"  -I"C:/Dev-Cpp/lib/gcc-lib/mingw32/3.3.1/include"  -I"C:/Dev-Cpp/include" 
+BIN  = Battaglia_Navale.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Battaglia_Navale.exe all-after
+
+
+clean: clean-custom
+	rm -f $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "Battaglia_Navale.exe" $(LIBS)
+
+BattagliaNavale.o: BattagliaNavale.c
+	$(CC) -c BattagliaNavale.c -o BattagliaNavale.o $(CFLAGS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+Useful.o: Useful.c
+	$(CC) -c Useful.c -o Useful.o $(CFLAGS)
+
+Th.o: Th.c
+	$(CC) -c Th.c -o Th.o $(CFLAGS)

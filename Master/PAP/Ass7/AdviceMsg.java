@@ -1,0 +1,27 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package pap.ass07;
+
+/**
+ *
+ * @author luca
+ */
+public class AdviceMsg {
+    
+    private boolean superiore;
+    
+    public AdviceMsg(boolean superiore)
+    {
+        this.superiore = superiore;
+    }
+    
+    public boolean isSuperiore()
+    {
+        return superiore;
+    }
+    
+}

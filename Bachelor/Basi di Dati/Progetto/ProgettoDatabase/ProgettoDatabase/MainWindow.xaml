@@ -1,0 +1,62 @@
+﻿<Window x:Class="ProgettoDatabase.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Progetto Database" Height="350" Width="525">
+    <Grid>
+        <Menu Height="23" HorizontalAlignment="Left" Name="menu1" VerticalAlignment="Top" Width="200" IsMainMenu="True" DataContext="{Binding}">
+            <MenuItem Header="Database">
+                <MenuItem Header="Connessione" Click="Connessione_Click">
+                </MenuItem>
+                <MenuItem Header="Genera Dati">
+                    <MenuItem Header="Container" Click="MenuItem_Click">
+                    </MenuItem>
+                    <MenuItem Header="Lavaggio" Click="MenuItem_Click">
+                    </MenuItem>
+                    <MenuItem Header="Pagamenti">
+                        <MenuItem Header="Pagamento Cliente" Click="MenuItem_Click">
+                        </MenuItem>
+                        <MenuItem Header="Pagamento Impianto" Click="MenuItem_Click">
+                        </MenuItem>
+                    </MenuItem>
+                    <MenuItem Header="Viaggi">
+                        <MenuItem Header="Viaggi Di Scarico" Click="MenuItem_Click">
+                        </MenuItem>
+                        <MenuItem Header="Viaggi Di Carico" Click="MenuItem_Click">
+                        </MenuItem>
+                        <MenuItem Header="Viaggi Ottimizzati" Click="MenuItem_Click">
+                        </MenuItem>
+                    </MenuItem>
+                </MenuItem>                
+            </MenuItem>
+            <MenuItem Header="Operazioni">
+                <MenuItem Header="Visualizza">
+                    <MenuItem Header="clienti serviti in un una settimana" Click="Operazioni_Click" Uid="v1">
+                    </MenuItem>
+                    <MenuItem Header="viaggi di scarico fatti da un camionista in una settimana" Click="Operazioni_Click" Uid="v2">
+                    </MenuItem>
+                    <MenuItem Header="viaggi di carico fatti da un camionista in una settimana" Click="Operazioni_Click" Uid="v3">
+                    </MenuItem>
+                    <MenuItem Header="container utilizzati almeno in un viaggio che non sono stati lavati nell'ultima settimana" Click="Operazioni_Click" Uid="v4">
+                    </MenuItem>
+                    <MenuItem Header="bilancio netto di un mese / anno" Click="Operazioni_Click" Uid="v5">
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="Inserisci">
+                    <MenuItem Header="viaggio di scarico" Click="Operazioni_Click" Uid="i1">
+                    </MenuItem>
+                    <MenuItem Header="viaggio di carico per un camionista" Click="Operazioni_Click" Uid="i2">
+                    </MenuItem>
+                    <MenuItem Header="viaggio ottimizzato" Click="Operazioni_Click" Uid="i3">
+                    </MenuItem>
+                </MenuItem>
+            </MenuItem>
+
+        </Menu>
+        <ListView Height="282" HorizontalAlignment="Left" Margin="12,29,0,0" Name="listView1" VerticalAlignment="Top" Width="479">
+            <ListView.View>
+            <GridView x:Name="gridView1">
+            </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

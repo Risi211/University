@@ -1,0 +1,1 @@
+java -cp lib/akka/akka-actor_2.11-2.3.3.jar:lib/akka/akka-kernel_2.11-2.3.3.jar:lib/akka/config-1.2.1.jar:lib/akka/scala-library-2.11.1.jar:. pap.ass07.Main 

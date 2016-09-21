@@ -1,0 +1,30 @@
+function [ str1,str2,str3,str4,str5,str6,str7,str8 ] = sparsa( r, c, i , vet )
+%crea 10 matrici random 5x5
+m1 = round(rand(5).*100);
+m2 = round(rand(5).*100);
+m3 = round(rand(5).*100);
+m4 = round(rand(5).*100);
+m5 = round(rand(5).*100);
+m6 = round(rand(5).*100);
+m7 = round(rand(5).*100);
+m8 = round(rand(5).*100);
+m9 = round(rand(5).*100);
+m10 = round(rand(5).*100);
+
+%per ogni matrice calcola la norma 1 e la norma infinito, infine controlla
+%la relazione di equivalenza
+%a è la norma 1, b è la norma infinito
+[a1,b1] = norma_mat(m1);
+[a2,b2] = norma_mat(m2);
+[a3,b3] = norma_mat(m3);
+[a4,b4] = norma_mat(m4);
+[a5,b5] = norma_mat(m5);
+[a6,b6] = norma_mat(m6);
+[a7,b7] = norma_mat(m7);
+[a8,b8] = norma_mat(m8);
+[a9,b9] = norma_mat(m9);
+[a10,b10] = norma_mat(m10);
+
+%confonta la relazione di equivalenza per ogni matrice
+str1 = strcat('1/n * norma inf = ',b1*(1/n),' <= norma 1 = ',a1,' <= n^(1/2)*norma inf = ',sqrt(n)*b1);
+end

@@ -1,0 +1,29 @@
+Stato di un oggetto = insieme dei suoi campi.
+
+Se non ne ha, non ha uno stato.
+
+----------------
+
+Differenza fra libreria e framework:
+
+la differenza è chi ha il controllo. 
+Il framework controlla l'esecuzione delle chiamate delle librerie
+(es. thread sotto che girano)
+
+--------------------
+
+scalac crea bytecode java.
+
+Può essere eseguito sulla JVM, 
+ma è meglio eseguirlo sulla virtual machine di Scala.
+
+Scala non ha tipi primitivi, tutto è un oggetto in scala.
+
+val è una costante, var può cambiare valore.
+
+scala> myList.filter( _ > 3 ) 
+
+Se devi passare un solo parametro puoi anche non chiamarlo.
+
+------------------
+

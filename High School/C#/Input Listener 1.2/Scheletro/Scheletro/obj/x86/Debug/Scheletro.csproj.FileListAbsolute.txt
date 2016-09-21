@@ -1,0 +1,66 @@
+C:\Documents and Settings\Luca\Impostazioni locali\Dati applicazioni\Temporary Projects\Scheletro\bin\Debug\Scheletro.exe
+C:\Documents and Settings\Luca\Impostazioni locali\Dati applicazioni\Temporary Projects\Scheletro\bin\Debug\Scheletro.pdb
+C:\Documents and Settings\Luca\Impostazioni locali\Dati applicazioni\Temporary Projects\Scheletro\bin\Debug\ClassLibrary1.dll
+C:\Documents and Settings\Luca\Impostazioni locali\Dati applicazioni\Temporary Projects\Scheletro\bin\Debug\ClassLibrary1.pdb
+C:\Documents and Settings\Luca\Impostazioni locali\Dati applicazioni\Temporary Projects\Scheletro\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Luca\Impostazioni locali\Dati applicazioni\Temporary Projects\Scheletro\obj\x86\Debug\Scheletro.Form1.resources
+C:\Documents and Settings\Luca\Impostazioni locali\Dati applicazioni\Temporary Projects\Scheletro\obj\x86\Debug\Scheletro.Properties.Resources.resources
+C:\Documents and Settings\Luca\Impostazioni locali\Dati applicazioni\Temporary Projects\Scheletro\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Luca\Impostazioni locali\Dati applicazioni\Temporary Projects\Scheletro\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Luca\Impostazioni locali\Dati applicazioni\Temporary Projects\Scheletro\obj\x86\Debug\Scheletro.exe
+C:\Documents and Settings\Luca\Impostazioni locali\Dati applicazioni\Temporary Projects\Scheletro\obj\x86\Debug\Scheletro.pdb
+C:\Documents and Settings\Luca\Desktop\Scheletro\Scheletro\obj\x86\Debug\Scheletro.exe
+C:\Documents and Settings\Luca\Desktop\Scheletro\Scheletro\obj\x86\Debug\Scheletro.pdb
+C:\Documents and Settings\Luca\Desktop\Scheletro\Scheletro\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Luca\Desktop\Scheletro\Scheletro\obj\x86\Debug\Prova.Form1.resources
+C:\Documents and Settings\Luca\Desktop\Scheletro\Scheletro\obj\x86\Debug\Scheletro.Properties.Resources.resources
+C:\Documents and Settings\Luca\Desktop\Scheletro\Scheletro\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Luca\Desktop\Scheletro\Scheletro\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Luca\Desktop\Scheletro\Scheletro\bin\Debug\Scheletro.exe
+C:\Documents and Settings\Luca\Desktop\Scheletro\Scheletro\bin\Debug\Scheletro.pdb
+C:\Documents and Settings\Luca\Desktop\Scheletro\Scheletro\bin\Debug\ClassLibrary1.dll
+C:\Documents and Settings\Luca\Desktop\Scheletro\Scheletro\bin\Debug\ClassLibrary1.pdb
+C:\Documents and Settings\Luca\Desktop\Input Listener\Scheletro\Scheletro\obj\x86\Debug\Scheletro.exe
+C:\Documents and Settings\Luca\Desktop\Input Listener\Scheletro\Scheletro\obj\x86\Debug\Scheletro.pdb
+C:\Documents and Settings\Luca\Desktop\Input Listener\Scheletro\Scheletro\bin\Debug\Scheletro.exe
+C:\Documents and Settings\Luca\Desktop\Input Listener\Scheletro\Scheletro\bin\Debug\Scheletro.pdb
+C:\Documents and Settings\Luca\Desktop\Input Listener\Scheletro\Scheletro\bin\Debug\ClassLibrary1.dll
+C:\Documents and Settings\Luca\Desktop\Input Listener\Scheletro\Scheletro\bin\Debug\ClassLibrary1.pdb
+C:\Documents and Settings\Luca\Desktop\Input Listener\Scheletro\Scheletro\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Luca\Desktop\Input Listener\Scheletro\Scheletro\obj\x86\Debug\Prova.Form1.resources
+C:\Documents and Settings\Luca\Desktop\Input Listener\Scheletro\Scheletro\obj\x86\Debug\Scheletro.Properties.Resources.resources
+C:\Documents and Settings\Luca\Desktop\Input Listener\Scheletro\Scheletro\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Luca\Desktop\Input Listener\Scheletro\Scheletro\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Luca\Desktop\Input Listener beta\Scheletro\Scheletro\obj\x86\Debug\Scheletro.exe
+C:\Documents and Settings\Luca\Desktop\Input Listener beta\Scheletro\Scheletro\obj\x86\Debug\Scheletro.pdb
+C:\Documents and Settings\Luca\Desktop\Input Listener beta\Scheletro\Scheletro\bin\Debug\Scheletro.exe
+C:\Documents and Settings\Luca\Desktop\Input Listener beta\Scheletro\Scheletro\bin\Debug\Scheletro.pdb
+C:\Documents and Settings\Luca\Desktop\Input Listener beta\Scheletro\Scheletro\bin\Debug\ClassLibrary1.dll
+C:\Documents and Settings\Luca\Desktop\Input Listener beta\Scheletro\Scheletro\bin\Debug\ClassLibrary1.pdb
+C:\Documents and Settings\Luca\Desktop\Input Listener beta\Scheletro\Scheletro\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Luca\Desktop\Input Listener beta\Scheletro\Scheletro\obj\x86\Debug\Prova.Form1.resources
+C:\Documents and Settings\Luca\Desktop\Input Listener beta\Scheletro\Scheletro\obj\x86\Debug\Scheletro.Properties.Resources.resources
+C:\Documents and Settings\Luca\Desktop\Input Listener beta\Scheletro\Scheletro\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Luca\Desktop\Input Listener beta\Scheletro\Scheletro\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1\Scheletro\Scheletro\obj\x86\Debug\Scheletro.exe
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1\Scheletro\Scheletro\obj\x86\Debug\Scheletro.pdb
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1\Scheletro\Scheletro\bin\Debug\Scheletro.exe
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1\Scheletro\Scheletro\bin\Debug\Scheletro.pdb
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1\Scheletro\Scheletro\bin\Debug\ClassLibrary1.dll
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1\Scheletro\Scheletro\bin\Debug\ClassLibrary1.pdb
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1\Scheletro\Scheletro\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1\Scheletro\Scheletro\obj\x86\Debug\Prova.Form1.resources
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1\Scheletro\Scheletro\obj\x86\Debug\Scheletro.Properties.Resources.resources
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1\Scheletro\Scheletro\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1\Scheletro\Scheletro\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1 Beta\Scheletro\Scheletro\obj\x86\Debug\Scheletro.exe
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1 Beta\Scheletro\Scheletro\obj\x86\Debug\Scheletro.pdb
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1 Beta\Scheletro\Scheletro\bin\Debug\Scheletro.exe
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1 Beta\Scheletro\Scheletro\bin\Debug\Scheletro.pdb
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1 Beta\Scheletro\Scheletro\bin\Debug\ClassLibrary1.dll
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1 Beta\Scheletro\Scheletro\bin\Debug\ClassLibrary1.pdb
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1 Beta\Scheletro\Scheletro\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1 Beta\Scheletro\Scheletro\obj\x86\Debug\Prova.Form1.resources
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1 Beta\Scheletro\Scheletro\obj\x86\Debug\Scheletro.Properties.Resources.resources
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1 Beta\Scheletro\Scheletro\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Luca\Desktop\Input Listener 1.1 Beta\Scheletro\Scheletro\obj\x86\Debug\GenerateResource.write.1.tlog
