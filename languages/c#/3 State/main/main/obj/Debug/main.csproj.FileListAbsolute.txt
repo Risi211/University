@@ -1,0 +1,5 @@
+C:\Users\Luca\Desktop\c#\3 State\main\main\bin\Debug\main.exe.config
+C:\Users\Luca\Desktop\c#\3 State\main\main\bin\Debug\main.exe
+C:\Users\Luca\Desktop\c#\3 State\main\main\bin\Debug\main.pdb
+C:\Users\Luca\Desktop\c#\3 State\main\main\obj\Debug\main.exe
+C:\Users\Luca\Desktop\c#\3 State\main\main\obj\Debug\main.pdb
