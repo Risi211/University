@@ -1,0 +1,7 @@
+﻿also known as Wrapper
+
+It allows behavior to be added to an individual object, either statically or dynamically, without affecting the behavior of other objects from the same class.
+
+The decorator pattern can be used to extend (decorate) the functionality of a certain object statically, or in some cases at run-time, independently of other instances of the same class, provided some groundwork is done at design time. This is achieved by designing a new Decorator class that wraps the original class. This wrapping could be achieved with a subclass the original "Component" class into a Decorator class (see UML diagram);
+
+This pattern is designed so that multiple decorators can be stacked on top of each other, each time adding a new functionality to the overridden method(s).

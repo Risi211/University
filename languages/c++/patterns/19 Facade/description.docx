@@ -1,0 +1,7 @@
+The facade pattern is typically used when:
+
+    a simple interface is required to access a complex system;
+    the abstractions and implementations of a subsystem are tightly coupled;
+    need an entry point to each level of layered software; or
+    a system is very complex or difficult to understand.
+
