@@ -1,0 +1,25 @@
+﻿
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The behavior of the algorithm is selected at runtime.
+
+Example: 
+
+The doOp method of the Context class depends on the actual strategy passed to the context object (either addition or substraction)
+
