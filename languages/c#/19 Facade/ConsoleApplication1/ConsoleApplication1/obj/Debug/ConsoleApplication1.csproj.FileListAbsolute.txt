@@ -1,0 +1,5 @@
+C:\Users\Luca\Desktop\languages\c#\19 Facade\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\Luca\Desktop\languages\c#\19 Facade\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\Luca\Desktop\languages\c#\19 Facade\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\Luca\Desktop\languages\c#\19 Facade\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\Luca\Desktop\languages\c#\19 Facade\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
