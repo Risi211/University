@@ -1,0 +1,27 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package main;
+
+/**
+ *
+ * @author lupin
+ */
+public class ProxyImage implements Image {
+
+    RealImage img;
+    String path_;
+    public ProxyImage(String path){
+        path_ = path;
+    }
+    @Override
+    public void draw() {
+        if(img == null){
+            img = new RealImage(path_);
+        }
+        img.draw();
+    }
+    
+}
