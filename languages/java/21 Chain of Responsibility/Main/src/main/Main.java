@@ -15,11 +15,13 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Director d = new Director();
-        d.setBuilder(new JeepBuilder());
-        d.getCar().specifications();
-        d.setBuilder(new NissanBuilder());
-        d.getCar().specifications();
+        Handler1 root = new Handler1();
+        Handler2 h2 = new Handler2();
+        root.add(h2);
+        h2.setNext(root);
+        for(int i = 0; i < 10; i++){
+            root.handle(i);
+        }
     }
     
 }

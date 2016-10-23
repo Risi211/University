@@ -15,11 +15,15 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Director d = new Director();
-        d.setBuilder(new JeepBuilder());
-        d.getCar().specifications();
-        d.setBuilder(new NissanBuilder());
-        d.getCar().specifications();
+        Element[] list = new Element[]{new This(), new That(), new TheOther()};
+        UpVisitor up = new UpVisitor();
+        DownVisitor down = new DownVisitor();
+        for(Element e : list){
+            e.accept(up);
+        }
+        for(Element e : list){
+            e.accept(down);
+        }        
     }
     
 }

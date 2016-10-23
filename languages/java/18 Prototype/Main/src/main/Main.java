@@ -5,6 +5,9 @@
  */
 package main;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author lupin
@@ -15,11 +18,14 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Director d = new Director();
-        d.setBuilder(new JeepBuilder());
-        d.getCar().specifications();
-        d.setBuilder(new NissanBuilder());
-        d.getCar().specifications();
+
+        List<Stooge> s = new ArrayList<>();
+        s.add(Factory.makeStooge(1));
+        s.add(Factory.makeStooge(2));
+        s.add(Factory.makeStooge(3));
+        
+        for (int i=0; i < s.size(); ++i)
+           s.get(i).slap_stick();
     }
     
 }

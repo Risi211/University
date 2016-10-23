@@ -15,11 +15,9 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Director d = new Director();
-        d.setBuilder(new JeepBuilder());
-        d.getCar().specifications();
-        d.setBuilder(new NissanBuilder());
-        d.getCar().specifications();
+        Facade f = new Facade();
+        f.Op1();
+        f.Op2();
     }
     
 }
