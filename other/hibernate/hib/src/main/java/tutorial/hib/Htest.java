@@ -16,7 +16,7 @@ import java.util.List;
 public class Htest {   
     
     public static void main(String[] args){
-        
+           
         List<Integer> ids = new ArrayList<>();
         
         //create 100 employees
@@ -40,9 +40,21 @@ public class Htest {
         }
                 
         //delete last 10 employees
-        for(int i = employees.size() - 10; i < employees.size(); i++){
+        for(int i = 0; i < 10; i++){
             Manager.deleteEmployee(ids.get(i));
-        }        
+        }            
+        
+        //set nicknames of all existing employees
+        employees = Manager.listEmployees();
+        for(Iterator<Employee> it = employees.iterator(); it.hasNext();){
+            Employee em = it.next();
+            Nicks n = new Nicks(em.getId());
+            n.setNick1("en1");
+            n.setNick2("en2");
+            em.setNicks(n);
+            Manager.updateEmployee(em);
+        }
+        
         
         //end hibernate session
         Manager.closeSession();

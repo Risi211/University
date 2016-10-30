@@ -24,6 +24,10 @@ public class Employee implements Serializable{
     private String surname;    
     @Column(name = "salary")
     private int salary;
+
+    @OneToOne(cascade = CascadeType.MERGE)
+    @PrimaryKeyJoinColumn
+    private Nicks nicknames;
     
     public Employee(){}
     
@@ -43,5 +47,8 @@ public class Employee implements Serializable{
     public void setSurname(String v){surname = v;}
 
     public int getSalary(){return salary;}
-    public void setSalary(int v){salary = v;}    
+    public void setSalary(int v){salary = v;}  
+    
+    public Nicks getNicks(){return nicknames;}
+    public void setNicks(Nicks n){nicknames = n;}      
 }

@@ -54,21 +54,20 @@ public class Manager {
     }
     
    public static List<Employee> listEmployees( ){
-      Session session = factory.openSession();
-      Transaction tx = null;
-      List<Employee> employees = null;
-      try{
-         tx = session.beginTransaction();
-         employees = session.createQuery("FROM Employee").list(); 
-         tx.commit();         
-      }catch (HibernateException e) {
-         if (tx!=null) tx.rollback();
-         e.printStackTrace(); 
-      }finally {
-         session.close(); 
-      }
-      return employees;
-   } 
+        Session session = factory.openSession();
+        Criteria cr = session.createCriteria(Employee.class);
+        List<Employee> employees = cr.list();
+        session.close();
+        return employees;
+   }
+   
+   public static void updateEmployee(Employee em){
+        Session session = factory.openSession();
+        Transaction tx = session.beginTransaction();
+        session.merge(em);
+        tx.commit();
+        session.close();        
+   }   
 
    public static void updateSalary(Integer EmployeeID, int salary ){
       Session session = factory.openSession();
@@ -86,6 +85,23 @@ public class Manager {
          session.close(); 
       }
    }
+   
+   public static void updateNickname(Integer EmployeeID, Nicks nickname ){
+      Session session = factory.openSession();
+      Transaction tx = null;
+      try{
+         tx = session.beginTransaction();
+         Employee employee = (Employee)session.get(Employee.class, EmployeeID); 
+         employee.setNicks(nickname);
+         session.update(employee); 
+         tx.commit();
+      }catch (HibernateException e) {
+         if (tx!=null) tx.rollback();
+         e.printStackTrace(); 
+      }finally {
+         session.close(); 
+      }
+   }   
 
    public static void deleteEmployee(Integer EmployeeID){
       Session session = factory.openSession();
