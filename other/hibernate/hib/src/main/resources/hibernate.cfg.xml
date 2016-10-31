@@ -24,7 +24,9 @@
     <property name="hibernate.hbm2ddl.auto">update</property>
  
     <mapping class="tutorial.hib.Employee" />   
-    <mapping class="tutorial.hib.Nicks" />   
+    <mapping class="tutorial.hib.Nicks" />
+    <mapping class="tutorial.hib.Cards" />   
+    <mapping class="tutorial.hib.Office" />   
         
     </session-factory>
 </hibernate-configuration>

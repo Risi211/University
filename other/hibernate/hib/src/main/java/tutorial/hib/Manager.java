@@ -36,7 +36,7 @@ public class Manager {
     
     private Manager() {}
     
-    public static Integer addEmployee(Employee em){
+    public static Integer add(Object em){
         Session session = factory.openSession();
         Transaction tx = null;
         Integer employeeID = null;
@@ -60,8 +60,16 @@ public class Manager {
         session.close();
         return employees;
    }
+
+   public static List<Office> listOffices( ){
+        Session session = factory.openSession();
+        Criteria cr = session.createCriteria(Office.class);
+        List<Office> employees = cr.list();
+        session.close();
+        return employees;
+   }
    
-   public static void updateEmployee(Employee em){
+   public static void update(Object em){
         Session session = factory.openSession();
         Transaction tx = session.beginTransaction();
         session.merge(em);
@@ -69,6 +77,22 @@ public class Manager {
         session.close();        
    }   
 
+   public static void persist(Object em){
+        Session session = factory.openSession();
+        Transaction tx = session.beginTransaction();
+        session.persist(em);
+        tx.commit();
+        session.close();        
+   }   
+
+   public static void saveOrUpdate(Object em){
+        Session session = factory.openSession();
+        Transaction tx = session.beginTransaction();
+        session.saveOrUpdate(em);
+        tx.commit();
+        session.close();        
+   }   
+   
    public static void updateSalary(Integer EmployeeID, int salary ){
       Session session = factory.openSession();
       Transaction tx = null;
@@ -117,5 +141,7 @@ public class Manager {
       }finally {
          session.close(); 
       }
-   }   
+   }
+
+    
 }

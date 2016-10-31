@@ -6,6 +6,8 @@
 package tutorial.hib;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 import javax.persistence.*;
 
 /**
@@ -29,6 +31,13 @@ public class Employee implements Serializable{
     @PrimaryKeyJoinColumn
     private Nicks nicknames;
     
+    @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL) //fetch = FetchType.EAGER
+    //@OrderBy("idCard asc")
+    private Set<Cards> cards;
+    
+    @ManyToMany(mappedBy = "employees", cascade = CascadeType.ALL) 
+    private Set<Office> offices;
+    
     public Employee(){}
     
     public Employee(String name, String surname, int salary){
@@ -50,5 +59,12 @@ public class Employee implements Serializable{
     public void setSalary(int v){salary = v;}  
     
     public Nicks getNicks(){return nicknames;}
-    public void setNicks(Nicks n){nicknames = n;}      
+    public void setNicks(Nicks n){nicknames = n;}     
+    
+    public Set<Cards> getCards(){return cards;}
+    public void setCards(Set<Cards> c){cards = c;}
+    
+    public Set<Office> getOffices(){return offices;}
+    public void setOffices(Set<Office> of){offices = of;}    
+    
 }
