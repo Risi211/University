@@ -1,3 +1,46 @@
-The visitor design pattern is a way of separating an algorithm from an object structure on which it operates. A practical result of this separation is the ability to add new operations to existing object structures without modifying those structures. It is one way to follow the open/closed principle.
+﻿The visitor design pattern is a way of separating an algorithm from an object structure on which it operates. A practical result of this separation is the ability to add new operations to existing object structures without modifying those structures. It is one way to follow the open/closed principle.
 
 
+Visitor:
+	- visit(Element e)
+
+Element:
+	- accept(Visitor v)
+
+
+E1 : Element
+E2 : Element
+E3 : Element
+
+V1 : Visitor
+V2 : Visitor
+V3 : Visitor
+
+
+E1, E2, E3:
+
+accept(Visitor v)
+
+	v.visit(this);
+
+
+V1, V2, V3:
+
+visit(E1 e)
+
+	//do something
+
+visit(E2 e)
+
+	//do something
+
+visit(E3 e)
+
+	//do something
+
+	
+
+
+double dispatch:
+
+both from abstract visitor and element

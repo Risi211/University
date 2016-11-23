@@ -1,0 +1,68 @@
+﻿LinQ = Query from existing data
+Entity Framework = ORM, it can modify dataset
+
+Most ORMs typically map domain types directly to the database schema.
+ 
+Entity Framework has a more granular mapping layer so you can customize mappings, for example, by mapping the single entity to multiple database tables or even multiple entities to a single table.
+
+
+
+CODE FIRST APPROACH
+Code First modeling workflow targets a database that doesn’t exist and Code First will create it.
+It can also be used if you have an empty database and then Code First will add new tables too.
+Code First allows you to define your model using C# or VB.Net classes.
+
+
+
+
+MODEL FIRST APPROACH
+Model First is great for when you're starting a new project where the database doesn't even exist yet.
+The model is stored in an EDMX file and can be viewed and edited in the Entity Framework Designer.
+In Model First, you define your model in an Entity Framework designer then generate SQL, which will create database schema to match your model and then you execute the SQL to create the schema in your database.
+The classes that you interact with in your application are automatically generated from the EDMX file.
+
+
+DATABASE FIRST APPROACH
+The Database First Approach provides an alternative to the Code First and Model First approaches to the Entity Data Model. It creates model codes (classes, properties, DbContext etc.) from the database in the project and those classes become the link between the database and controller.
+The Database First Approach creates the entity framework from an existing database. We use all other functionalities, such as the model/database sync and the code generation, in the same way we used them in the Model First approach.
+
+
+Two of them, Database First and Model First, depended on the Entity Framework designer combined with code generation.
+The third, Code First, lets you skip a visual designer and just write your own code.
+Regardless of which path you choose, you'll end up with domain classes and one or more Entity Framework DbContext classes allows you to retrieve and persist data relevant to those classes.
+
+
+
+
+
+
+
+DATABASE TRANSCATIONS
+In all versions of Entity Framework, whenever you execute SaveChanges() to insert, update or delete the database, the framework will wrap that operation in a transaction. When you invoke SaveChanges, the context automatically starts a transaction and commits or rolls it back depending on whether the persistence succeeded.
+This is all transparent to you, and you’ll never need to deal with it.
+This transaction lasts only long enough to execute the operation and then completes.
+When you execute another such operation, a new transaction starts.
+
+VIEWS
+A view is an object that contains data obtained by a predefined query. A view is a virtual object or table whose result set is derived from a query. It is very similar to a real table because it contains columns and rows of data. Following are some typical uses of views −
+Filter data of underlying tables 
+Filter data for security purposes 
+Centralize data distributed across several servers 
+Create a reusable set of data 
+Views can be used in a similar way as you can use tables. To use view as an entity, first you will need to add database views to EDM. After adding views to your model then you can work with it the same way as normal entities except for Create, Update, and Delete operations.
+
+STORED PROCEDURE
+The Entity Framework allows you to use stored procedures in the Entity Data Model instead of, or in combination with, its automatic command generation.
+
+DATA ANNOTATIONS:
+public class Student {
+
+   [Key]
+   public int StdntID { get; set; }
+   public string LastName { get; set; }
+   public string FirstMidName { get; set; }
+   public DateTime EnrollmentDate { get; set; }
+        
+   public virtual ICollection<Enrollment> Enrollments { get; set; }
+}
+

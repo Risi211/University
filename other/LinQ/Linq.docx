@@ -1,0 +1,221 @@
+﻿Syntax of LINQ
+There are two syntaxes of LINQ. These are the following ones.
+Lamda (Method) Syntax
+Example
+var longWords = words.Where( w => w.length > 10);
+Dim longWords = words.Where(Function(w) w.length > 10)
+Query (Comprehension) Syntax
+Example
+var longwords = from w in words where w.length > 10;
+Dim longwords = from w in words where w.length > 10
+Types of LINQ
+The types of LINQ are mentioned below in brief.
+LINQ to Objects 
+LINQ to XML(XLINQ) 
+LINQ to DataSet 
+LINQ to SQL (DLINQ) 
+LINQ to Entities 
+
+
+SqlConnection sqlConnection = new SqlConnection(connectString);
+SqlConnection.Open();
+System.Data.SqlClient.SqlCommand sqlCommand = new SqlCommand();
+sqlCommand.Connection = sqlConnection;
+sqlCommand.CommandText = "Select * from Customer";
+return sqlCommand.ExecuteReader (CommandBehavior.CloseConnection)  
+Interestingly, out of the featured code lines, query gets defined only by the last two. Using LINQ, the same data query can be written in a readable color-coded form like the following one mentioned below that too in a very less time.
+Northwind db = new Northwind(@"C:\Data\Northwnd.mdf");
+var query = from c in db.Customers
+            select c;
+
+
+
+
+
+
+
+
+
+
+
+
+LINQ TO SQL
+
+Below is a diagram showing the execution architecture of LINQ to SQL.
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LINQ DATASET
+
+string connectString = System.Configuration.ConfigurationManager.ConnectionStrings["LinqToSQLDBConnectionString"].ToString();
+
+        string sqlSelect = "SELECT * FROM Department;" +
+                           "SELECT * FROM Employee;";
+
+        // Create the data adapter to retrieve data from the database
+        SqlDataAdapter da = new SqlDataAdapter(sqlSelect, connectString);
+        
+        // Create table mappings
+        da.TableMappings.Add("Table", "Department");
+        da.TableMappings.Add("Table1", "Employee");
+
+        // Create and fill the DataSet
+        DataSet ds = new DataSet();
+        da.Fill(ds);
+
+        DataRelation dr = ds.Relations.Add("FK_Employee_Department",
+                          ds.Tables["Department"].Columns["DepartmentId"],
+                          ds.Tables["Employee"].Columns["DepartmentId"]);
+
+        DataTable department = ds.Tables["Department"];
+        DataTable employee = ds.Tables["Employee"];
+
+        var query = from d in department.AsEnumerable()
+                    join e in employee.AsEnumerable()
+                    on d.Field<int>("DepartmentId") equals
+                    e.Field<int>("DepartmentId")                        
+                    select new
+                    {
+                       EmployeeId = e.Field<int>("EmployeeId"),
+                       Name = e.Field<string>("Name"),                            
+                       DepartmentId = d.Field<int>("DepartmentId"),                            
+                       DepartmentName = d.Field<string>("Name")
+                    };
+
+        foreach (var q in query)
+        {
+           Console.WriteLine("Employee Id = {0} , Name = {1} , Department Name = {2}",
+                             q.EmployeeId, q.Name, q.DepartmentName);
+        }
+
+        Console.WriteLine("\nPress any key to continue.");
+        Console.ReadKey();
+     }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+LINQ TO SQL
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Xml.Linq;
+
+namespace LINQtoXML
+{
+  class ExampleOfXML
+  {
+     static void Main(string[] args)
+     {
+        string myXML = @"<Departments>
+                       <Department>Account</Department>
+                       <Department>Sales</Department>
+                       <Department>Pre-Sales</Department>
+                       <Department>Marketing</Department>
+                       </Departments>";
+
+        XDocument xdoc = new XDocument();
+        xdoc = XDocument.Parse(myXML);
+
+        var result = xdoc.Element("Departments").Descendants();
+
+        foreach (XElement item in result)
+        {
+           Console.WriteLine("Department Name - " + item.Value);
+        }
+
+        Console.WriteLine("\nPress any key to continue.");
+        Console.ReadKey();
+     }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+delegate bool D();
+delegate int del(int i);
+
+LAMBDA EXPRESSION
+
+ del myDelegate = y => y * y;
+        int j = myDelegate(5);
+
+ASYNC LAMBDA
+
+The lambda expression created by incorporating asynchronous processing by the use of async keyword is known as async lambdas. Below is an example of async lambda.
+Func<Task<string>> getWordAsync = async() => “hello”;
+
+ foreach (int i in source.Where(
+                 x =>
+                 {
+                    if (x <= 3)
+                       return true;
+                    else if (x >= 7)
+                       return true;
+                    return false;
+                 }
+                ))
+        Console.WriteLine(i);
+        Console.ReadLine();
+     }
+

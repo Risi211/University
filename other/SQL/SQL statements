@@ -1,0 +1,37 @@
+sql (structured query language)
+
+-----
+
+ddl data definition language
+
+create table
+drop
+alter
+rename
+
+-----
+
+dml data manipulation language (transact sql)
+
+insert
+delete
+update
+select
+
+-----
+
+dcl data control language, to control access (authorization)
+
+grant, revoke
+
+----
+
+Transactions:
+
+commit, rollback
+
+----
+
+each aaa
+eachlp
+

@@ -1,0 +1,60 @@
+﻿Spring enables developers to develop enterprise-class applications using POJOs.
+
+
+
+The technology that Spring is most identified with is the Dependency Injection (DI) flavor of Inversion of Control.
+
+
+
+Annotations:
+
+Replace Bean Configuration File
+
+
+Bean Scope:
+
+
+singleton
+This scopes the bean definition to a single instance per Spring IoC container (default).
+prototype
+This scopes a single bean definition to have any number of object instances.
+
+
+
+Init and destroy methods
+
+(To be defined as annotations)
+
+public class ExampleBean {
+   public void init() {
+      // do some initialization work
+   }
+   public void destroy() {
+      // do some destruction work
+   }
+}
+
+
+Inheritance among beans is allowed
+
+
+Dependency Injection:
+
+public class TextEditor {
+   private SpellChecker spellChecker;
+   
+   public TextEditor(SpellChecker spellChecker) {
+      this.spellChecker = spellChecker;
+   }
+}
+
+   public static void main(String[] args) {
+      ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
+
+      TextEditor te = (TextEditor) context.getBean("textEditor");
+
+      te.spellCheck();
+   }
+
+
+

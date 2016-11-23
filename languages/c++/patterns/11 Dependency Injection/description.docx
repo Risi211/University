@@ -1,5 +1,67 @@
-Dependency injection is a software design pattern that implements inversion of control for resolving dependencies. A dependency is an object that can be used (a service). An injection is the passing of a dependency to a dependent object (a client) that would use it. The service is made part of the client's state.[1] Passing the service to the client, rather than allowing a client to build or find the service, is the fundamental requirement of the pattern.
+﻿Dependency injection for five-year-olds
+When you go and get things out of the refrigerator for yourself, you can cause problems. You might leave the door open, you might get something Mommy or Daddy doesn't want you to have. You might even be looking for something we don't even have or which has expired.
+What you should be doing is stating a need, "I need something to drink with lunch," and then we will make sure you have something when you sit down to eat.
 
-Dependency injection allows a program design to follow the dependency inversion principle. The client delegates the responsibility of providing its dependencies to external code (the injector) .
 
-The client is not allowed to call the injector code.[2] It is the injecting code that constructs the services and calls the client to inject them. This means the client code does not need to know about the injecting code. The client does not need to know how to construct the services. The client does not need to know which actual services it is using. The client only needs to know about the intrinsic interfaces of the services because these define how the client may use the services. This separates the responsibilities of use and construction.
+There are three common means for a client to accept a dependency injection: setter-, interface- and constructor-based injection. Setter and constructor injection differ mainly by when they can be used. Interface injection differs in that the dependency is given a chance to control its own injection
+
+
+
+// An example without dependency injection
+public class Client {
+    // Internal reference to the service used by this client
+    private Service service;
+
+    // Constructor
+    Client() {
+        // Specify a specific implementation in the constructor instead of using dependency injection
+        service = new ServiceExample();
+    }
+
+    // Method within this client that uses the services
+    public String greet() {
+        return "Hello " + service.getName();
+    }
+}
+
+
+
+CONSTRUCTOR INJECTION
+
+// Constructor
+Client(Service service) {
+    // Save the reference to the passed-in service inside this client
+    this.service = service;
+}
+
+
+SETTER INJECTION
+
+// Setter method
+public void setService(Service service) {
+    // Save the reference to the passed-in service inside this client
+    this.service = service;
+}
+
+
+
+
+INTERFACE INJECTION
+
+// Service setter interface.
+public interface ServiceSetter {
+    public void setService(Service service);
+}
+
+// Client class
+public class Client implements ServiceSetter {
+    // Internal reference to the service used by this client.
+    private Service service;
+
+    // Set the service that this client is to use.
+    @Override
+    public void setService(Service service) {
+        this.service = service;
+    }
+}
+

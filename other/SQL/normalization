@@ -1,0 +1,50 @@
+Normalization:
+
+Redundancy: duplicate values
+
+Insert Anomaly: ex. We cannot insert a new University without students
+
+Update Anomaly: ex. When we update the name of a student, we have to update all the rows that identify him
+
+Deletion Anomaly: ex. If we want to delete an employee, we have to delete him from all the projects.
+
+
+1NF:
+
+each attribute is atomic, 
+ex. sede (Milano, Roma, Napoli) is not 1NF
+
+2NF:
+
+each non-prime attribute depends completely from the primary key (not partially)
+ex. Articolo, Magazzino, Quantità, Indirizzo
+key: Articolo + Magazzino
+Magazzino -> Indirizzo
+
+It is not 2NF because of Indirizzo, we have to separate it into 2 tables.
+
+
+3NF:
+
+There are not transitive dependencies between non-prime attributes and the primary key
+
+ex: IMPIEGATI(Imp_cod,Nome,Reparto,Capo_reparto)
+
+Imp_cod -> Reparto -> Capo Reparto, this is not in 3NF
+
+
+
+Boyce Codd:
+
+for each X -> A dependency, X is a primary key
+
+ex.
+
+Prefisso, Telefono, Località, Nome
+Key: Prefisso, Telefono
+
+it is in 3NF but not in Boyce Codd, because of Località -> Prefisso
+
+
+3NF = Boyce Codd if there is only 1 key attribute
+

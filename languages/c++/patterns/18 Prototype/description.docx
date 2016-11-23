@@ -1,8 +1,61 @@
-It is used when the type of objects to create is determined by a prototypical instance, which is cloned to produce new objects. This pattern is used to:
+﻿It is used when the type of objects to create is determined by a prototypical instance, which is cloned to produce new objects. This pattern is used to:
 
     - avoid subclasses of an object creator in the client application, like the abstract factory pattern does.
 
     - avoid the inherent cost of creating a new object in the standard way (e.g., using the 'new' keyword) when it is prohibitively expensive for a given application.
 
 
+
+The rule of thumb could be that you would need to clone() an Object when you want to create another Object at runtime that is a true copy of the Object you are cloning. True copy means all the attributes of the newly created Object should be the same as the Object you are cloning. If you could have instantiated the class by using new instead, you would get an Object with all attributes as their initial values.
+
+
+
+C#
+
+public abstract class Prototype
+{
+    // normal implementation
+    public abstract Prototype Clone();
+}
+
+public class ConcretePrototype1 : Prototype
+{
+    public override Prototype Clone()
+    {
+        return (Prototype)this.MemberwiseClone(); // Clones the concrete class.
+    }
+}
+
+public class ConcretePrototype2 : Prototype
+{
+    public override Prototype Clone()
+    {
+        return (Prototype)this.MemberwiseClone(); // Clones the concrete class.
+    }
+}
+
+
+JAVA
+
+// Prototype pattern
+
+         public abstract class Prototype implements Cloneable {
+                 public Prototype clone() throws CloneNotSupportedException{
+                         return (Prototype) super.clone();
+                }
+        }
+        
+         public class ConcretePrototype1 extends Prototype {
+                @Override
+                 public Prototype clone() throws CloneNotSupportedException {
+                        return super.clone();
+                }
+        }
+
+        public class ConcretePrototype2 extends Prototype {
+                @Override
+                public Prototype clone() throws CloneNotSupportedException {
+                        return super.clone();
+                }
+        }
 

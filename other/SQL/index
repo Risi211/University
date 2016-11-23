@@ -1,0 +1,3 @@
+﻿An index is an on-disk data structure that is based on tables and views. 
+Indexes make the retrieval of data faster and efficient, in most cases. 
+However, overloading a table or view with indexes could unpleasantly affect the performance of other operations such as inserts or updates.
